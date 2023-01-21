@@ -6,13 +6,87 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <hearer></hearer>
+    <header>  
+        <h1>Welcome to the Button Game!</h1>
+    </header>
     
     <main>
 
-        
+        <!-- Contains instruction elements -->
+        <div class="container"> 
+            <div id="instructions1">
+                <h2>Make Money!</h2>
+                <ul>
+                    <p id="instructionsText"> - Click the button to get Points! </p>
+                    <p id="instructionsText"> - Money = Points(1) x Gain(%) </p>
+                    <p id="instructionsText"> - Increase Gain = more Money! </p>
+                </ul>
+            </div>
+            <div id="instructions2">
+                <h2> Spend Money! </h2>
+                <ul>
+                    <p id="instructionsText"> - Buy upgrades = more Gain / Points! </p>
+                    <p id="instructionsText"> - Gain = percentage multiplyer </p>
+                    <p id="instructionsText"> - Points = numberical multiplyer! </p>
+                </ul>
+            </div>       
+            <div id="instructions3">
+                <h2> Be lazy! </h2>
+                <ul>
+                    <p id="instructionsText"> - Buy Miners to click for you! <p>
+                    <p id="instructionsText"> - Miners can be upgraded too! <p>
+                    <p id="instructionsText"> - More Miners = less work! </p>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contains playable elements (Main button, click upgrade, autominers)-->
+        <div id="playElements">
+            <!-- Contains Click-Upgrade button elements -->
+            <div id="clickUpgrades">
+                <h3>Upgrades</h3>   
+                <p id="playstats">Level: <a id="upgradeLevel">0</a></p>  
+                <p id="playstats">Value / click: <a id="upgradeTotalValue">1</a></p>
+                <p id="playstats">Cost of next Upgrade: <a id="upgradePrice">10</a></p>  
+                <script>
+                    var upgradeLevel = 0;
+                    var upgradeTotalValue = 1;
+                    var upgradePrice = 10;
+                </script>      
+            </div>  
+
+            <!-- Contains Main button elements -->         
+            <div id="mainButtonElement">
+                <h3>Currency: <a id="totalCurrency">0</a></h3>  
+                <p id="instructionsText">Total Points (<a id="points">1</a>) 
+                    + Total Gain (<a id="gain">100</a>%) 
+                    = Currency (<a id ="currency">1</a>) / click</p>             
+                <script>
+                    var clicks = 0;
+                    var points = 1;
+                    var gain = 1;
+                </script>
+                <button id="mainbutton" type="button" onClick="clickMain()">Get Money!</button>
+            </div>
+
+            <!-- Contains Miner button elements -->
+            <div id="miners">
+                <h3>Miners</h3>   
+                <p id="playstats">Level: <a id="minerLevel">0</a></p>  
+                <p id="playstats">Value / Second: <a id="minerTotalValue">0</a></p>   
+                <p id="playstats">Cost of next Miner: <a id="minerPrice">100</a></p>   
+                <script>
+                    var minerLevel = 0;
+                    var minerTotalValue = 1;
+                    var minerPrice = 100;
+                </script>                         
+            </div>
+        </div>
+
+
     </main>
 
-    <footer></footer>
+    <footer> A Michael Dulin Game </footer>
+
 </body>
 </html>
