@@ -42,17 +42,14 @@
 
         <!-- Contains playable elements (Main button, click upgrade, autominers)-->
         <div id="playElements">
+
             <!-- Contains Click-Upgrade button elements -->
             <div id="clickUpgrades">
                 <h3>Upgrades</h3>   
                 <p id="playstats">Level: <a id="upgradeLevel">0</a></p>  
-                <p id="playstats">Value / click: <a id="upgradeTotalValue">1</a></p>
-                <p id="playstats">Cost of next Upgrade: <a id="upgradePrice">10</a></p>  
-                <script>
-                    var upgradeLevel = 0;
-                    var upgradeTotalValue = 1;
-                    var upgradePrice = 10;
-                </script>      
+                <p id="playstats">Value: <a id="upgradeTotalValue">0</a></p>
+                <p id="playstats">Cost of next Upgrade: <a id="upgradePrice">10</a></p> 
+                <button id="upgradeButton" type="button" onClick="clickUpgrade()">Upgrade!</button>     
             </div>  
 
             <!-- Contains Main button elements -->         
@@ -61,11 +58,7 @@
                 <p id="instructionsText">Total Points (<a id="points">1</a>) 
                     + Total Gain (<a id="gain">100</a>%) 
                     = Currency (<a id ="currency">1</a>) / click</p>             
-                <script>
-                    var clicks = 0;
-                    var points = 1;
-                    var gain = 1;
-                </script>
+
                 <button id="mainbutton" type="button" onClick="clickMain()">Get Money!</button>
             </div>
 
@@ -74,12 +67,7 @@
                 <h3>Miners</h3>   
                 <p id="playstats">Level: <a id="minerLevel">0</a></p>  
                 <p id="playstats">Value / Second: <a id="minerTotalValue">0</a></p>   
-                <p id="playstats">Cost of next Miner: <a id="minerPrice">100</a></p>   
-                <script>
-                    var minerLevel = 0;
-                    var minerTotalValue = 1;
-                    var minerPrice = 100;
-                </script>                         
+                <p id="playstats">Cost of next Miner: <a id="minerPrice">100</a></p>                          
             </div>
         </div>
 
